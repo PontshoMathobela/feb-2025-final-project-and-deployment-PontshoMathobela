@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me - My Blog</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>  
+    <img src="images/linkedin.jpg" alt="Profile Picture" class="profile-pic" />
+    <h1>Pontsho Mathobela</h1>
+    <h1>About Me</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+    <button id="themeToggleBtn" onclick="toggleTheme()">Switch to Dark Mode</button>
+  </header>
+
+  <main>
+    <section>
+      <h2>Hello, I'm Pontsho Mathobela👋</h2>
+      <p>
+        Welcome to my blog! I'm a passionate web developer and creative writer. I use this space to share my thoughts, document my learning journey, and write about topics I care about.
+      </p>
+      <p>
+        I enjoy building websites, exploring new technologies, and writing articles that might inspire or help others. Whether it's about coding, productivity, or life lessons, you’ll find a bit of everything here.
+      </p>
+    </section>
+
+    <section>
+      <h2>Skills & Interests</h2>
+      <ul>
+        <li>🌐 Front-end Development (HTML, CSS, JavaScript)</li>
+        <li>🎨 Database Design</li>
+        <li>✍🏽 Creative Writing & Blogging</li>
+        <li>📚 Lifelong Learning</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact Me</h2>
+      <p>If you’d like to reach out, feel free to drop a message below.</p>
+      <form onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Your Name" /><br />
+        <textarea id="message" placeholder="Your Message"></textarea><br />
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Pontsho Mathobela 2025.All Rights Reserved| Built with 💻 & ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
