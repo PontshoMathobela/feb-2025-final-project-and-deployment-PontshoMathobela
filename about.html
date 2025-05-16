@@ -7,54 +7,67 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>  
-    <img src="images/linkedin.jpg" alt="Profile Picture" class="profile-pic" />
-    <h1>Pontsho Mathobela</h1>
-    <h1>About Me</h1>
-    <nav>
+  <header class="animate-fade-in">  
+    <div class="profile-container">
+      <img src="images/linkedin.jpg" alt="Profile Picture" class="profile-pic hover-effect" />
+      <h1 class="typing-effect">Pontsho Mathobela</h1>
+    </div>
+    <nav class="sliding-nav">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="beginner-guide.html">Beginner's Guide</a>
     </nav>
     <button id="themeToggleBtn" onclick="toggleTheme()">Switch to Dark Mode</button>
   </header>
 
   <main>
-    <section>
-      <h2>Hello, I'm Pontsho Mathobela👋</h2>
-      <p>
-        Welcome to my blog! I'm a passionate web developer and creative writer. I use this space to share my thoughts, document my learning journey, and write about topics I care about.
+    <section class="about-section animate-on-scroll">
+      <h2 class="gradient-text">Hello, I'm Pontsho Mathobela 👋</h2>
+      <p class="animated-paragraph">
+        I'm a passionate software developer based in South Africa, with a deep love for creating beautiful and functional web experiences. My journey in tech began with a curiosity about how websites work, and it has evolved into a fulfilling career in web development.
       </p>
-      <p>
-        I enjoy building websites, exploring new technologies, and writing articles that might inspire or help others. Whether it's about coding, productivity, or life lessons, you’ll find a bit of everything here.
+      <p class="animated-paragraph">
+        When I'm not coding, you'll find me exploring new technologies, writing technical articles, or contributing to open-source projects. I believe in the power of technology to make a positive impact on people's lives, and I'm constantly working to improve my skills to create better solutions.
+      </p>
+      <p class="animated-paragraph">
+        I'm particularly interested in web accessibility and creating inclusive digital experiences that work for everyone. My goal is to combine technical expertise with creativity to build websites that not only look great but also provide real value to users.
       </p>
     </section>
 
-    <section>
-      <h2>Skills & Interests</h2>
-      <ul>
-        <li>🌐 Front-end Development (HTML, CSS, JavaScript)</li>
-        <li>🎨 Database Design</li>
-        <li>✍🏽 Creative Writing & Blogging</li>
-        <li>📚 Lifelong Learning</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Contact Me</h2>
-      <p>If you’d like to reach out, feel free to drop a message below.</p>
-      <form onsubmit="return validateForm()">
-        <input type="text" id="name" placeholder="Your Name" /><br />
-        <textarea id="message" placeholder="Your Message"></textarea><br />
-        <button type="submit">Send Message</button>
-      </form>
+    <section class="skills-section animate-on-scroll">
+      <h2 class="gradient-text">Skills & Expertise</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <span class="skill-icon">💻</span>
+          <h3>Web Development</h3>
+          <p>HTML5| CSS3|JavaScript</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🎨</span>
+          <h3>Database Designs</h3>
+          <p>Responsive Design, User Experience</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">📱</span>
+          <h3>Mobile Development</h3>
+          <p>Progressive Web Apps</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🔧</span>
+          <h3>Tools & Technologies</h3>
+          <p>Git, VS Code, Node.js</p>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; Pontsho Mathobela 2025.All Rights Reserved| Built with 💻 & ❤️</p>
+    <p class="animate-fade-in">&copy; Pontsho Mathobela 2025. All Rights Reserved</p>
   </footer>
 
+  <div id="toast" class="toast" style="display: none;"></div>
   <script src="script.js"></script>
 </body>
 </html>

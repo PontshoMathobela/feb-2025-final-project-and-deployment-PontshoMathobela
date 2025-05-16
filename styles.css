@@ -1,44 +1,181 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-header, footer {
-  background-color: #250f04;
-  color: white;
-  text-align: center;
-  padding: 1rem;
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  background-color: #f5f7fa;
+  color: #333;
 }
-image{
-    max-width: 100%;
-    height: auto;
+
+header {
+  background-color: darkgoldenrod;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: rgb(61, 4, 4);
+}
+
+nav {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 nav a {
-  color: white;
-  margin: 0 15px;
   text-decoration: none;
+  color: #e81a1a;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #0b55c7;
 }
 
 main {
-  padding: 2rem;
+  padding: 2rem 1rem;
+  max-width: 1100px;
+  margin: auto;
 }
 
-section {
-  margin-bottom: 2rem;
+.blogs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
-.dark-mode {
-  background-color: #121212;
-  color: #f1f1f1;
+.blog-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
 }
 
+.blog-card:hover {
+  transform: translateY(-5px);
+}
 
-@media (max-width: 600px) {
-  nav {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+.blog-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.blog-card h2 {
+  font-size: 1.5rem;
+  margin: 1rem;
+  color: #1a1a1a;
+}
+
+.blog-card p {
+  font-size: 1rem;
+  margin: 0 1rem 1rem;
+  color: #555;
+}
+
+.blog-card a {
+  display: block;
+  margin: 0 1rem 1.5rem;
+  color: #1a73e8;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.blog-card a:hover {
+  color: #0b55c7;
+}
+
+footer {
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+body.dark-mode {
+  background-color: #181a1b;
+  color: #f5f7fa;
+}
+
+body.dark-mode header {
+  background-color: #222a2e;
+  color: #e0eaff;
+}
+
+body.dark-mode nav {
+  background-color: #23272b;
+  border-bottom: 1px solid #333;
+}
+
+body.dark-mode nav a {
+  color: #90caf9;
+}
+
+body.dark-mode nav a:hover {
+  color: #42a5f5;
+}
+
+body.dark-mode .blog-card {
+  background-color: #23272b;
+  color: #f5f7fa;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .blog-card h2,
+body.dark-mode .blog-card h3 {
+  color: #90caf9;
+}
+
+body.dark-mode .blog-card p {
+  color: #b0bec5;
+}
+
+body.dark-mode .blog-card a {
+  color: #90caf9;
+}
+
+body.dark-mode .blog-card a:hover {
+  color: #42a5f5;
+}
+
+body.dark-mode footer {
+  background-color: #23272b;
+  color: #b0bec5;
+}
+
+image {
+  max: width 100%;
+  height: 300px;
+  width: 400px;
+  object-fit: cover;
 }

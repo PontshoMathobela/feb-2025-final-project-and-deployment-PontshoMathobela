@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Blog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="animate-fade-in">
+    <h1>Welcome to My Blog</h1>
+    <button id="themeToggleBtn" onclick="toggleTheme()">Switch to Dark Mode</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="beginner-guide.html">Beginner's Guide</a>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="hero">
+      <h2>Welcome to My Corner of the Web!</h2>
+      <p>Exploring the world of web development, one line of code at a time.</p>
+      <a href="blog.html" class="cta-button">Read My Blog</a>
+    </section>
+
+    <section class="featured-posts">
+      <h2>Featured Posts</h2>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg" alt="Coding" />
+          </div>
+            <div class="blog-content">
+            <h3>Getting Started with Web Development</h3>
+            <p>A beginner's guide to starting your coding journey...</p>
+            <a href="/beginner-guide.html" class="read-more">Read More</a>
+            </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Pontsho Mathobela 2025. All Rights Reserved</p>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>

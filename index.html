@@ -1,30 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Blog</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal blog on web development and tech insights by Pontsho Mathobela." />
+  <meta name="author" content="Pontsho Mathobela" />
+  <title>My Blog | Pontsho Mathobela</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>My Blog</h1>
-    <button id="themeToggleBtn" onclick="toggleTheme()">Switch to Dark Mode</button>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="blog.html">Blog</a>
-    </nav>
+  <header class="animate-fade-in">
+    <div class="container">
+      <h1>Welcome to My Blog</h1>
+      <button id="themeToggleBtn" aria-label="Toggle Dark Mode">Switch to Dark Mode</button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
+
   <main>
-    <section>
-      <h2>Welcome!</h2>
-      <p>This is my personal blog where I share thoughts and stories.</p>
+    <section class="hero">
+      <div class="container">
+        <h2>Welcome to My Corner of the Web!</h2>
+        <p>Exploring the world of web development, one line of code at a time.</p>
+        <a href="blog.html" class="cta-button">Read My Blog</a>
+      </div>
+    </section>
+
+    <section class="featured-posts">
+      <div class="container">
+        <h2>Featured Posts</h2>
+        <div class="blog-grid">
+
+          <!-- Post 1 -->
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg" alt="Coding workspace" loading="lazy" />
+            </div>
+            <div class="blog-content">
+              <h3>Getting Started with Web Development</h3>
+              <p>A beginner's guide to starting your coding journey...</p>
+              <a href="beginners-guide.html" class="read-more">Read More</a>
+            </div>
+          </article>
+
+          <!-- Post 2 -->
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg" alt="Laptop and notebook" loading="lazy" />
+            </div>
+            <div class="blog-content">
+              <h3>Understanding HTML Semantics</h3>
+              <p>Why using semantic tags is crucial for accessibility and SEO...</p>
+              <a href="blog.html" class="read-more">Read More</a>
+            </div>
+          </article>
+
+          <!-- Post 3 -->
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg" alt="JavaScript code on screen" loading="lazy" />
+            </div>
+            <div class="blog-content">
+              <h3>Adding Interactivity with JavaScript</h3>
+              <p>Learn how to enhance user experience with vanilla JS features...</p>
+              <a href="blog.html" class="read-more">Read More</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
     </section>
   </main>
+
   <footer>
-    <p>&copy;Pontsho Mathobela 2025.All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 Pontsho Mathobela. All Rights Reserved.</p>
+    </div>
   </footer>
-  <script src="script.js"></script>
+
+  <script>
+  // Dark mode toggle
+  function toggleTheme() {
+    document.body.classList.toggle('dark-mode');
+    const btn = document.getElementById('themeToggleBtn');
+    btn.textContent = document.body.classList.contains('dark-mode') ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('themeToggleBtn').addEventListener('click', toggleTheme);
+  });
+</script>
 </body>
 </html>
