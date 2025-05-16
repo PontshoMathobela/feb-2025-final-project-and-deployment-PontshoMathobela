@@ -4,43 +4,58 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us | My Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>Contact Us</h1>
-    <p>We'd love to hear from you!</p>
+    <div class="container">
+      <h1>Contact Us</h1>
+      <button id="themeToggleBtn" aria-label="Toggle Dark Mode">Switch to Dark Mode</button>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+        <a href="beginner-guide.html">Beginner's Guide</a>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="beginners-guide.html">Beginner's Guide</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
   <main>
-    <section>
-      <h2>Get in Touch</h2>
-      <p>Fill out the form below to send us a message. We usually respond within 24–48 hours.</p>
+    <section class="contact-section">
+      <div class="container">
+        <h2>Get in Touch</h2>
+        <p>Fill out the form below to send us a message. We usually respond within 24–48 hours.</p>
 
-      <form action="https://formspree.io/f/mkgryrvk" method="post" class="contact-form">
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" required>
+        <form action="https://formspree.io/f/mkgryrvk" method="post" class="contact-form">
+          <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
 
-        <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" required>
+          <div class="form-group">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
 
-        <label for="message">Your Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+          <div class="form-group">
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
 
-        <button type="submit">Send Message</button>
-      </form>
+          <button type="submit" class="submit-button">Send Message</button>
+        </form>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 My Blog. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 Pontsho Mathobela. All Rights Reserved.</p>
+    </div>
   </footer>
+ <button id="themeToggleBtn" aria-label="Toggle Dark Mode">Switch to Dark Mode</button>
+  <script src="script.js"></script>
 </body>
 </html>

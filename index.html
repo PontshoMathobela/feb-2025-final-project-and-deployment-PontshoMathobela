@@ -6,25 +6,20 @@
   <meta name="description" content="Personal blog on web development and tech insights by Pontsho Mathobela." />
   <meta name="author" content="Pontsho Mathobela" />
   <title>My Blog | Pontsho Mathobela</title>
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="animate-fade-in">
+  <header>
     <div class="container">
       <h1>Welcome to My Blog</h1>
       <button id="themeToggleBtn" aria-label="Toggle Dark Mode">Switch to Dark Mode</button>
       <nav>
-        <ul class="nav-links">
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="beginner-guide.html">Beginner's Guide</a>
       </nav>
     </div>
   </header>
@@ -42,8 +37,6 @@
       <div class="container">
         <h2>Featured Posts</h2>
         <div class="blog-grid">
-
-          <!-- Post 1 -->
           <article class="blog-card">
             <div class="blog-image">
               <img src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg" alt="Coding workspace" loading="lazy" />
@@ -51,11 +44,10 @@
             <div class="blog-content">
               <h3>Getting Started with Web Development</h3>
               <p>A beginner's guide to starting your coding journey...</p>
-              <a href="beginners-guide.html" class="read-more">Read More</a>
+              <a href="beginner-guide.html" class="read-more">Read More</a>
             </div>
           </article>
 
-          <!-- Post 2 -->
           <article class="blog-card">
             <div class="blog-image">
               <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg" alt="Laptop and notebook" loading="lazy" />
@@ -63,11 +55,10 @@
             <div class="blog-content">
               <h3>Understanding HTML Semantics</h3>
               <p>Why using semantic tags is crucial for accessibility and SEO...</p>
-              <a href="blog.html" class="read-more">Read More</a>
+             
             </div>
           </article>
 
-          <!-- Post 3 -->
           <article class="blog-card">
             <div class="blog-image">
               <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg" alt="JavaScript code on screen" loading="lazy" />
@@ -75,10 +66,8 @@
             <div class="blog-content">
               <h3>Adding Interactivity with JavaScript</h3>
               <p>Learn how to enhance user experience with vanilla JS features...</p>
-              <a href="blog.html" class="read-more">Read More</a>
             </div>
           </article>
-
         </div>
       </div>
     </section>
@@ -90,17 +79,6 @@
     </div>
   </footer>
 
-  <script>
-  // Dark mode toggle
-  function toggleTheme() {
-    document.body.classList.toggle('dark-mode');
-    const btn = document.getElementById('themeToggleBtn');
-    btn.textContent = document.body.classList.contains('dark-mode') ? 'Switch to Light Mode' : 'Switch to Dark Mode';
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('themeToggleBtn').addEventListener('click', toggleTheme);
-  });
-</script>
+  <script src="script.js" type="module"></script>
 </body>
 </html>
